@@ -1,0 +1,6 @@
+#定时发送昨日新增积分
+0 09 * * * /usr/bin/curl http://localhost:8096/push/testTask?taskId=1
+#定时处理im发送完毕push 记录状态,并清理原始push内容
+ 2,32 * * * * /usr/bin/curl http://localhost:8096/taskRecord/handleStatus
+#定时清理已发送完毕push task record
+0 02 * * * /usr/bin/curl http://localhost:8096/taskRecord/remove
