@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql:replication://10.9.2.150:3306,10.9.2.151:3306/testbaymax?rewriteBatchedStatements=true&useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: bjjava
+    password: abcd1234ed
+  redis:
+    sentinel:
+      nodes: 10.9.2.153:26379,10.9.2.154:26379,10.9.2.155:26379
+      master: testbaymax
+    password: 7lkddfdf
+baymax:
+  mongo:
+    - bean-name: pushMongoTemplate
+      uri: mongodb://bjava:bjjava23456@10.9.2.156:27017,10.9.2.157:27017,10.9.2.158:27017/baymaxPush

@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql:replication://baymaxw1.mysql.7lk.com:3306,baymaxr1.mysql.7lk.com:3306/baymax?rewriteBatchedStatements=true&useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: baymax-dev
+    password: baymax-dev123567
+  redis:
+    sentinel:
+      nodes: redis1.qlk.com:26379,redis2.qlk.com:26379,redis3.qlk.com:26379
+      master: mymaster
+    password: 7lkddfdfdff223D
+baymax:
+  mongo:
+    - bean-name: pushMongoTemplate
+      uri: mongodb://baymaxPush:baymax_pushqwe456@baymax2.mongodb.7lk.com:27017,baymax3.mongodb.7lk.com:27017,baymax1.mongodb.7lk.com:27017/baymaxPush

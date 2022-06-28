@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task-list>
+	<!-- 定时统计用户昨日新增积分 -->
+	<task>
+		<id>1</id>
+		<sendTime>09:00:00</sendTime>
+		<linktype>qlkJifenHistory</linktype>
+		<content>尊敬的%s医生，您昨日获得%s积分，继续加油哦！</content>
+	</task>
+</task-list>

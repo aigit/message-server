@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: am
+  profiles:
+    active: dev
+  data:
+    jpa:
+      repositories:
+        #这里使用原生hibernate ，所以先不启用jpa
+        enabled: false
+logging:
+  pattern:
+    dateformat: HH:mm:ss.SSS
